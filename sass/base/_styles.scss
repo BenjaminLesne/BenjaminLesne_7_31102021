@@ -1,33 +1,29 @@
-.body {
-	max-width: 1200px;
-	margin: auto;
-	position: relative;
+// .body {
+// 	max-width: 1200px;
+// 	margin: auto;
+// 	position: relative;
 
-	&--menu-page {
-		max-width: 900px;
-	}
-}
+// 	&--menu-page {
+// 		max-width: 900px;
+// 	}
+// }
 
-a {
-	text-decoration: none;
-	color: initial;
-}
+// a {
+// 	text-decoration: none;
+// 	color: initial;
+// }
 
-button {
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-}
+// button {
+// 	border: none;
+// 	background-color: transparent;
+// 	cursor: pointer;
+// }
 
-.logo {
-	@include logo-MenuName-fontFamily;
-	margin-bottom: 10px;
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 
-	&--margin0 {
-		margin: 0;
-	}
-}
-
-.center-my-btn {
-	@include flexbox-center;
-}
+  }

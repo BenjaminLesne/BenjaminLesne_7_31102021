@@ -4,35 +4,14 @@
 	align-items: center;
 }
 
-@mixin logo-MenuName-fontFamily {
-	font-family: 'Shrikhand', cursive;
+@mixin flexbox-between-center {
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-@mixin titles {
-	font-size: 30px;
-	font-weight: 600;
-}
-
-@mixin btn {
-	border: none transparent;
-	font-weight: 500;
-	cursor: pointer;
-}
-
-@mixin btn-call-to-action {
-	@include btn;
-	border-radius: 50px;
-	color: white;
-	padding: 15px 20px;
-	margin-bottom: 20px;
-	background: $color-gradient-primary-secondary;
-
-	-webkit-box-shadow: $box-shadow-medium;
-	box-shadow: $box-shadow-medium;
-}
-
-@mixin light-font-text {
-	font-size: 20px;
-	font-weight: 300;
-	color: lighten($color: #000000, $amount: 30%);
+@mixin filter-buttons {
+	@extend .btn;
+	@include flexbox-between-center()
 }

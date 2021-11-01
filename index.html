@@ -2,276 +2,175 @@
 <html lang="en">
 
 <head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Les petits plats</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
 
-    <!-- Fonts -->
+    <!-- js -->
+    <script type="module" src="./js/index.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
     <!-- FontAwesome - icons -->
     <script src="https://kit.fontawesome.com/0902388030.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="body">
-    <div class="loading-screen">
-        <div class="loading-screen__logo-wrapper">
-            <span class="loading-screen__logo"><span class="loading-screen__inner-logo"></span></span>
+<body>
+    <header class="header">
+        <div>
+            <svg class="header__svg" width="52" height="52" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 64 64" xml:space="preserve">
+                <path d="M47.4,12.5C45.3,5.8,39.1,1.3,32,1.3c-7.1,0-13.3,4.5-15.4,11.2C8.7,14.1,3,21,3,29.1v0.1C3,35.4,7.7,40.6,13.8,41.4
+   c0,3.3,0.2,10.8,0.2,15.5c0,3.2,2.7,5.8,5.9,5.8h24.1c3.2,0,5.8-2.6,5.9-5.8l0.3-15.6C56.4,40.6,61,35.3,61,29.1
+   C61,21,55.3,14.1,47.4,12.5z M44.1,59.3H19.9c-1.3,0-2.4-1.1-2.4-2.3c0-1.4,0-3.1-0.1-4.9h29.1l-0.1,4.9
+   C46.4,58.2,45.4,59.3,44.1,59.3z M49.1,38c-1.3,0.1-2.2,1.1-2.3,2.3l-0.2,8.2H17.4c-0.1-3.6-0.1-6.9-0.1-8.2c0-1.2-1-2.2-2.2-2.3
+   c-4.8-0.3-8.6-4.1-8.6-8.8v-0.1c0-6.4,4.6-12,10.9-13.2c1.2-0.2,2.1-1.1,2.5-2.2c1.7-5.3,6.5-8.9,12.1-8.9c5.6,0,10.5,3.6,12.1,8.9
+   c0.4,1.1,1.3,2,2.5,2.2c6.3,1.2,10.9,6.8,10.9,13.2C57.5,33.8,53.8,37.8,49.1,38z" />
+            </svg>
         </div>
-    </div>
-    <header class="header header--with-box-shadow">
-        <h1 class="logo">ohmyfood</h1>
+        <h1 class="header__title">Les petits plats</h1>
     </header>
+
     <main>
-        <section class="short-presentation-section">
-            <div class="short-presentation-section__location"><i class="fas fa-map-marker-alt"></i> Paris,
-                Belleville</div>
-            <div class="short-presentation-section__text">
-                <div class="short-presentation-section__title">Réservez le menu qui vous convient</div>
-                <div class="short-presentation-section__description">
-                    Découvrez des restaurants d'exception, sélectionnés
-                    par nos soins.
-                </div>
-                <div><button class="call-to-action-btn">Explorer nos restaurants</button></div>
+        <nav class="main-nav">
+            <div class="search-bar">
+                <input class="search-bar__input" type="search"
+                    placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette" /><i
+                    class="fas fa-search"></i>
             </div>
+            <div>
+                <div class="filters">
 
-        </section>
-        <section class="list-items-section">
-            <h1 class="list-items-section__title">Fonctionnement</h1>
-            <ul class="list-items-wrapper">
-                <li class="how-it-works-item"><span>1</span><i class="fas fa-mobile-alt how-it-works-item__icon"></i>
-                    Choississez un restaurant
-                </li>
-                <li class="how-it-works-item"><span>2</span><i class="fas fa-list-ul how-it-works-item__icon"></i>
-                    Composez votre menu</li>
-                <li class="how-it-works-item how-it-works-item--purpleish-bg"><span>3</span><i
-                        class="fas fa-store how-it-works-item__icon how-it-works-item__icon--purple "></i>
-                    Dégustez au
-                    restaurant</li>
-
-            </ul>
-        </section>
-        <section class="list-items-section list-items-section--background-color">
-            <h1 class="list-items-section__title">Restaurants</h1>
-            <ul class="list-items-wrapper">
-
-                <li class="product">
-                    <div class="product__top-content-wrapper">
-                        <a href="la-palette-du-gout-menu-page.html">
-                            <div class="product__flag">Nouveau</div>
-                            <div>
-                                <img src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                                    alt="Photo d'un plat de chez La palette du goût" class="product__image">
+                </div>
+                <div class="dropdowns">
+                    <div class="dropdown">
+                        <button class="dropdown__button dropdown__button--ingredients" type="button"
+                            id="dropdownMenuButton1" aria-expanded="false" data-type="ingredients">
+                            <div class="dropdown__close"><span>ingredients</span><i class="fas fa-chevron-down"></i>
                             </div>
-                        </a>
-                    </div>
-                    <div class="product__info-block">
 
-                        <div class="product__text">
-
-                            <h2 class="product__title">La palette du goût</h2>
-                            <h3 class="product__description">Ménilmontant</h3>
-                        </div>
-                        <div class="product__add-to-favorite-btn-wrapper">
-                            <button type="button" class="product__add-to-favorite-btn animated-heart">
-
-
-                                <svg class=" product__add-to-favorite-logo animated-heart__static-heart"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    viewBox="10 10 24 24">
-                                    <defs>
-                                        <linearGradient id="linear-gradient-heart">
-                                            <stop class="animated-heart__gradient-stop-1" offset="0">
-
-                                            </stop>
-                                            <stop class="animated-heart__gradient-stop-2" offset="1">
-
-                                            </stop>
-                                        </linearGradient>
-                                    </defs>
-                                    <path fill="url(#linear-gradient-heart)"
-                                        d="M20,31 C15.4189994,27.2225585 12.5023327,24.2225585 11.25,22 C10.2743515,20.6156479 10,19.6181623 10,18.1428571 C10,15.5113854 12.4883456,13 15,13 C17.3176009,13 18.9621484,13.8491346 20,15.5714286 C21.0382977,13.8491346 22.6828452,13 25,13 C27.5116544,13 30,15.5113854 30,18.1428571 C30,19.6181623 29.7256485,20.6156479 28.75,22 C27.497816,24.2225585 24.5811493,27.2225585 20,31 Z" />
-                                </svg>
-                                <svg class="animated-heart__translating-heart" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="10 10 24 24">
-                                    <path
-                                        d="M20,31 C15.4189994,27.2225585 12.5023327,24.2225585 11.25,22 C10.2743515,20.6156479 10,19.6181623 10,18.1428571 C10,15.5113854 12.4883456,13 15,13 C17.3176009,13 18.9621484,13.8491346 20,15.5714286 C21.0382977,13.8491346 22.6828452,13 25,13 C27.5116544,13 30,15.5113854 30,18.1428571 C30,19.6181623 29.7256485,20.6156479 28.75,22 C27.497816,24.2225585 24.5811493,27.2225585 20,31 Z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="product">
-                    <div class="product__top-content-wrapper">
-                        <a href="la-note-enchantee-menu-page.html">
-                            <div class="product__flag">Nouveau</div>
-                            <div>
-                                <img src="images/stil-u2Lp8tXIcjw-unsplash.jpg"
-                                    alt="Photo d'un plat de chez La note enchantée" class="product__image">
+                            <div class="dropdown__open"><input class="dropdown__input" type="search"
+                                    placeholder="Recherche un ingredients"><i class="fas fa-chevron-up"></i>
                             </div>
-                        </a>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu--ingredients" data-type="ingredients">
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+
+
+                        </ul>
                     </div>
-                    <div class="product__info-block">
-
-                        <div class="product__text">
-
-                            <h2 class="product__title">La note enchantée</h2>
-                            <h3 class="product__description">Charonne</h3>
-                        </div>
-                        <div class="product__add-to-favorite-btn-wrapper">
-                            <button type="button" class="product__add-to-favorite-btn animated-heart">
-
-
-                                <svg class=" product__add-to-favorite-logo animated-heart__static-heart"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    viewBox="10 10 24 24">
-                                    <defs>
-                                        <linearGradient id="linear-gradient">
-                                            <stop class="animated-heart__gradient-stop-1" offset="0">
-
-                                            </stop>
-                                            <stop class="animated-heart__gradient-stop-2" offset="1">
-
-                                            </stop>
-                                        </linearGradient>
-                                    </defs>
-                                    <path fill="url(#linear-gradient)"
-                                        d="M20,31 C15.4189994,27.2225585 12.5023327,24.2225585 11.25,22 C10.2743515,20.6156479 10,19.6181623 10,18.1428571 C10,15.5113854 12.4883456,13 15,13 C17.3176009,13 18.9621484,13.8491346 20,15.5714286 C21.0382977,13.8491346 22.6828452,13 25,13 C27.5116544,13 30,15.5113854 30,18.1428571 C30,19.6181623 29.7256485,20.6156479 28.75,22 C27.497816,24.2225585 24.5811493,27.2225585 20,31 Z" />
-                                </svg>
-                                <svg class="animated-heart__translating-heart" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="10 10 24 24">
-                                    <path
-                                        d="M20,31 C15.4189994,27.2225585 12.5023327,24.2225585 11.25,22 C10.2743515,20.6156479 10,19.6181623 10,18.1428571 C10,15.5113854 12.4883456,13 15,13 C17.3176009,13 18.9621484,13.8491346 20,15.5714286 C21.0382977,13.8491346 22.6828452,13 25,13 C27.5116544,13 30,15.5113854 30,18.1428571 C30,19.6181623 29.7256485,20.6156479 28.75,22 C27.497816,24.2225585 24.5811493,27.2225585 20,31 Z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="product">
-                    <div class="product__top-content-wrapper">
-                        <a href="a-la-francaise-menu-page.html">
-                            <div>
-                                <img src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                                    alt="Photo d'un plat de chez Â la française" class="product__image">
+                    <div class="dropdown">
+                        <button class="dropdown__button dropdown__button--utensils" type="button"
+                            id="dropdownMenuButton1" aria-expanded="false" data-type="utensils">
+                            <div class="dropdown__close"><span>utensils</span><i class="fas fa-chevron-down"></i>
                             </div>
-                        </a>
-                    </div>
-                    <div class="product__info-block">
 
-                        <div class="product__text">
-
-                            <h2 class="product__title">Â la française</h2>
-                            <h3 class="product__description">Cité Rouge</h3>
-                        </div>
-                        <div class="product__add-to-favorite-btn-wrapper">
-                            <button type="button" class="product__add-to-favorite-btn animated-heart">
-
-
-                                <svg class=" product__add-to-favorite-logo animated-heart__static-heart"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    viewBox="10 10 24 24">
-                                    <defs>
-                                        <linearGradient id="linear-gradient-heart2">
-                                            <stop class="animated-heart__gradient-stop-1" offset="0">
-
-                                            </stop>
-                                            <stop class="animated-heart__gradient-stop-2" offset="1">
-
-                                            </stop>
-                                        </linearGradient>
-                                    </defs>
-                                    <path fill="url(#linear-gradient-heart2)"
-                                        d="M20,31 C15.4189994,27.2225585 12.5023327,24.2225585 11.25,22 C10.2743515,20.6156479 10,19.6181623 10,18.1428571 C10,15.5113854 12.4883456,13 15,13 C17.3176009,13 18.9621484,13.8491346 20,15.5714286 C21.0382977,13.8491346 22.6828452,13 25,13 C27.5116544,13 30,15.5113854 30,18.1428571 C30,19.6181623 29.7256485,20.6156479 28.75,22 C27.497816,24.2225585 24.5811493,27.2225585 20,31 Z" />
-                                </svg>
-                                <svg class="animated-heart__translating-heart" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="10 10 24 24">
-                                    <path
-                                        d="M20,31 C15.4189994,27.2225585 12.5023327,24.2225585 11.25,22 C10.2743515,20.6156479 10,19.6181623 10,18.1428571 C10,15.5113854 12.4883456,13 15,13 C17.3176009,13 18.9621484,13.8491346 20,15.5714286 C21.0382977,13.8491346 22.6828452,13 25,13 C27.5116544,13 30,15.5113854 30,18.1428571 C30,19.6181623 29.7256485,20.6156479 28.75,22 C27.497816,24.2225585 24.5811493,27.2225585 20,31 Z" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="product">
-                    <div class="product__top-content-wrapper">
-                        <a href="le-delice-des-sens-menu-page.html">
-                            <div>
-                                <img src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                                    alt="Photo d'un plat de chez Le délice des sens" class="product__image">
+                            <div class="dropdown__open"><input class="dropdown__input" type="search"
+                                    placeholder="Recherche un utensils"><i class="fas fa-chevron-up"></i>
                             </div>
-                        </a>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu--utensils" data-type="utensils">
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+
+
+                        </ul>
                     </div>
-                    <div class="product__info-block">
+                    <div class="dropdown">
+                        <button class="dropdown__button dropdown__button--appliances" type="button"
+                            id="dropdownMenuButton1" aria-expanded="false" data-type="appliances">
+                            <div class="dropdown__close"><span>appliances</span><i class="fas fa-chevron-down"></i>
+                            </div>
 
-                        <div class="product__text">
+                            <div class="dropdown__open"><input class="dropdown__input" type="search"
+                                    placeholder="Recherche une appliance"><i class="fas fa-chevron-up"></i>
+                            </div>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu--appliances" data-type="appliances">
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
+                            <li class="dropdown-menu__item" data-value="Moutarde de Dijon">Moutarde de Dijon</li>
+                            <li class="dropdown-menu__item" data-value="Lait de coco">Lait de coco</li>
 
-                            <h2 class="product__title">Le délice des sens</h2>
-                            <h3 class="product__description">Folie-Méricourt</h3>
-                        </div>
-                        <div class="product__add-to-favorite-btn-wrapper">
-                            <button type="button" class="product__add-to-favorite-btn animated-heart">
 
-
-                                <svg class=" product__add-to-favorite-logo animated-heart__static-heart"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    viewBox="10 10 24 24">
-                                    <defs>
-                                        <linearGradient id="linear-gradient-heart3">
-                                            <stop class="animated-heart__gradient-stop-1" offset="0">
-
-                                            </stop>
-                                            <stop class="animated-heart__gradient-stop-2" offset="1">
-
-                                            </stop>
-                                        </linearGradient>
-                                    </defs>
-                                    <path fill="url(#linear-gradient-heart3)"
-                                        d="M20,31 C15.4189994,27.2225585 12.5023327,24.2225585 11.25,22 C10.2743515,20.6156479 10,19.6181623 10,18.1428571 C10,15.5113854 12.4883456,13 15,13 C17.3176009,13 18.9621484,13.8491346 20,15.5714286 C21.0382977,13.8491346 22.6828452,13 25,13 C27.5116544,13 30,15.5113854 30,18.1428571 C30,19.6181623 29.7256485,20.6156479 28.75,22 C27.497816,24.2225585 24.5811493,27.2225585 20,31 Z" />
-                                </svg>
-                                <svg class="animated-heart__translating-heart" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="10 10 24 24">
-                                    <path
-                                        d="M20,31 C15.4189994,27.2225585 12.5023327,24.2225585 11.25,22 C10.2743515,20.6156479 10,19.6181623 10,18.1428571 C10,15.5113854 12.4883456,13 15,13 C17.3176009,13 18.9621484,13.8491346 20,15.5714286 C21.0382977,13.8491346 22.6828452,13 25,13 C27.5116544,13 30,15.5113854 30,18.1428571 C30,19.6181623 29.7256485,20.6156479 28.75,22 C27.497816,24.2225585 24.5811493,27.2225585 20,31 Z" />
-                                </svg>
-                            </button>
-                        </div>
+                        </ul>
                     </div>
 
-                </li>
+                </div>
 
-            </ul>
-        </section>
+            </div>
+        </nav>
 
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
+                </div>
+            </div>
+        </div>
     </main>
-    <footer class="footer">
-        <h3 class="logo footer__logo">ohmyfood</h3>
-        <ul>
-            <li class="footer__list-item--medium-font"><a href="#"><i class="fas fa-utensils"></i>Proposer un
-                    restaurant</a></li>
-            <li class="footer__list-item--medium-font"><a href="#"><i class="fas fa-hands-helping"></i>Devenir
-                    partenaire</a></li>
-            <li><a href="#">Mention légales</a></li>
-            <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
 
-        </ul>
-
-    </footer>
-
+    <!-- Bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
