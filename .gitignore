@@ -5,4 +5,4 @@ sass/*
 .prettierrc
 package-lock.json
 package.json
-bootstrap/*
+bootstrap
