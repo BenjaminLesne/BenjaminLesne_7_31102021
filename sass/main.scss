@@ -13,7 +13,6 @@
 // @import "./pages/about";
 // @import "./pages/project";
 @import "../bootstrap/scss/bootstrap.scss";
-@import "./vendors/_bootstrapModification";
 
 @import "./utils/variables";
 @import "./utils/mixins";
@@ -26,3 +25,5 @@
 @import "./components/_filter";
 @import "./components/_dropdown";
 @import "./components/_recipe";
+@import "./components/_mainContent";
+@import "./components/_recipe-not-found";

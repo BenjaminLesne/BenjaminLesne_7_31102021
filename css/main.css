@@ -11156,11 +11156,6 @@ textarea.form-control-lg, textarea.search-bar {
     display: none !important;
   }
 }
-.dropdown__input:focus {
-  border: none;
-  box-shadow: none;
-}
-
 /* my custom css reset then normalize.css */
 html {
   box-sizing: border-box;
@@ -11593,10 +11588,13 @@ body {
   transform: translateY(-5%);
   border: none !important;
   padding: 10px !important;
+  overflow: hidden;
 }
 .dropdown-menu__item {
   color: white;
   cursor: pointer;
+  width: 33.3333333333%;
+  margin-left: 10px;
 }
 .dropdown-menu__item:hover {
   background-color: #0b6dfc;
@@ -11646,6 +11644,23 @@ body {
 .recipe__body {
   background-color: #f2f2f2;
   height: 190px;
+}
+
+.mainContent {
+  position: relative;
+}
+
+.recipe-not-found {
+  position: absolute;
+  text-align: center;
+  width: 100% !important;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.recipe-not-found__msg {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

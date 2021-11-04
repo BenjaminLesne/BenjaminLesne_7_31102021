@@ -1,12 +1,25 @@
 const RecipeFactory = function () {
   this.createRecipe = function (info) {
     const recipe = {
-      name: info.name,
+      name: info.name.toLowerCase(),
       time: info.time,
       ingredients: info.ingredients,
-      description: info.description,
+      appliance: info.appliance.toLowerCase(),
+      ustensils: info.ustensils,
+      description: info.description.toLowerCase(),
       html: "",
     };
+
+    // standardize all element value in array
+    for (let i = 0; i < info.ingredients.length; i += 1) {
+      recipe.ingredients[i].ingredient =
+        info.ingredients[i].ingredient.toLowerCase();
+    }
+
+    // standardize all element value in array
+    for (let i = 0; i < info.ustensils.length; i += 1) {
+      recipe.ustensils[i] = info.ustensils[i].toLowerCase();
+    }
 
     const generateIngredients = async (dataIngredients) => {
       let ingredientsHTML = ``;
