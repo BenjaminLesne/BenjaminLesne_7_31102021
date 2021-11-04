@@ -11,39 +11,40 @@ const RecipeFactory = function () {
     };
 
     // standardize all element value in array
-    for (let i = 0; i < info.ingredients.length; i += 1) {
-      recipe.ingredients[i].ingredient =
-        info.ingredients[i].ingredient.toLowerCase();
-    }
+    recipe.ingredients.forEach((ingredientsArray) => {
+      const myIngredientsArray = ingredientsArray;
+      myIngredientsArray.ingredient =
+        myIngredientsArray.ingredient.toLowerCase();
+    });
 
     // standardize all element value in array
-    for (let i = 0; i < info.ustensils.length; i += 1) {
-      recipe.ustensils[i] = info.ustensils[i].toLowerCase();
-    }
+
+    recipe.ustensils.forEach((myUstensil) => {
+      let ustensil = myUstensil;
+      ustensil = ustensil.toLowerCase();
+    });
 
     const generateIngredients = async (dataIngredients) => {
       let ingredientsHTML = ``;
 
-      for (let i = 0; i < dataIngredients.length; i += 1) {
+      dataIngredients.forEach((ingredientsArray) => {
         ingredientsHTML += `
                 
                 <li>
                     <span class="recipe__ingredients-name">${
-                      dataIngredients[i].ingredient
-                        ? dataIngredients[i].ingredient
+                      ingredientsArray.ingredient
+                        ? ingredientsArray.ingredient
                         : ""
                     }:</span>
                     <span class="recipe__ingredients-quantity">${
-                      dataIngredients[i].quantity
-                        ? dataIngredients[i].quantity
-                        : ""
+                      ingredientsArray.quantity ? ingredientsArray.quantity : ""
                     }${
-          dataIngredients[i].unit ? dataIngredients[i].unit : ""
+          ingredientsArray.unit ? ingredientsArray.unit : ""
         }</span>
                 </li>               
                 
                 `;
-      }
+      });
 
       return ingredientsHTML;
     };

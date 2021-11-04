@@ -25,9 +25,10 @@ window.onload = function () {
 
         if (allFilters.length > 0) {
           const filtersValue = [];
-          for (let i = 0; i < allFilters.length; i += 1) {
-            filtersValue.push(allFilters[i].dataset.filter);
-          }
+
+          allFilters.forEach((filter) =>
+            filtersValue.push(filter.dataset.filter)
+          );
 
           const resultWithFilters = await generateNewResult(
             newResult,
@@ -41,11 +42,11 @@ window.onload = function () {
 
         const allMyItems = document.querySelectorAll(".dropdown-menu__item");
         // listen click event of new items generated
-        for (let i = 0; i < allMyItems.length; i += 1) {
-          allMyItems[i].addEventListener("click", async (clickEvent) =>
+        allMyItems.forEach((item) => {
+          item.addEventListener("click", async (clickEvent) =>
             filterContent(clickEvent)
           );
-        }
+        });
       };
 
       updateContent();
@@ -69,19 +70,17 @@ window.onload = function () {
 
       const allMyItems = document.querySelectorAll(".dropdown-menu__item");
       // listen to click to new items generated
-      for (let i = 0; i < allMyItems.length; i += 1) {
-        allMyItems[i].addEventListener("click", async (event) =>
-          filterContent(event)
-        );
-      }
+      allMyItems.forEach((item) => {
+        item.addEventListener("click", async (event) => filterContent(event));
+      });
     });
   };
 
   datas.then(async (data) => {
     // display all recipes and standardize data
-    for (let i = 0; i < data.recipes.length; i += 1) {
-      result.push(recipeFactory.createRecipe(data.recipes[i]));
-    }
+    data.recipes.forEach((recipe) => {
+      result.push(recipeFactory.createRecipe(recipe));
+    });
 
     iAmNotInspired();
 
@@ -91,18 +90,19 @@ window.onload = function () {
       if (userInput.length >= 3) {
         newResult = [];
         // launch algo
-        for (let i = 0; i < result.length; i += 1) {
+
+        result.forEach((resultItem) => {
           // check if inputValue is in the database
           if (
-            result[i].name.includes(userInput) ||
-            result[i].description.includes(userInput) ||
-            result[i].appliance.includes(userInput) ||
-            result[i].ustensils.includes(userInput) ||
-            isInputInIngredients(result[i], userInput)
+            resultItem.name.includes(userInput) ||
+            resultItem.description.includes(userInput) ||
+            resultItem.appliance.includes(userInput) ||
+            resultItem.ustensils.includes(userInput) ||
+            isInputInIngredients(resultItem, userInput)
           ) {
-            newResult.push(recipeFactory.createRecipe(result[i]));
+            newResult.push(recipeFactory.createRecipe(resultItem));
           }
-        }
+        });
         iAmNotInspired();
       } else if (!(newResult.length === 50)) {
         newResult = result;

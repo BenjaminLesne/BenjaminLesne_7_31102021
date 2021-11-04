@@ -1,11 +1,10 @@
 import isInputInIngredients from "./isInputInIngredients.js";
 
-const generateNewResult = async (currentResult, filter) => {
+const generateNewResult = async (currentResult, filterss) => {
   const newResult = [];
-  console.log("filter");
-  console.log(filter);
   // update search results
-  for (let i = 0; i < currentResult.length; i += 1) {
+
+  currentResult.forEach((recipe) => {
     const conditions = {
       name: true,
       description: true,
@@ -14,26 +13,23 @@ const generateNewResult = async (currentResult, filter) => {
       ingredients: true,
     };
 
-    // check if all filters are respected and store the result
-    for (let j = 0; j < filter.length; j += 1) {
-      conditions.name =
-        conditions.name && currentResult[i].name.includes(filter[j]);
+    // check if all filterss are respected and store the result
+    filterss.forEach((filter) => {
+      conditions.name = conditions.name && recipe.name.includes(filter);
       conditions.description =
-        conditions.description &&
-        currentResult[i].description.includes(filter[j]);
+        conditions.description && recipe.description.includes(filter);
 
       conditions.appliance =
-        conditions.appliance && currentResult[i].appliance.includes(filter[j]);
+        conditions.appliance && recipe.appliance.includes(filter);
 
       conditions.ustensils =
-        conditions.ustensils && currentResult[i].ustensils.includes(filter[j]);
+        conditions.ustensils && recipe.ustensils.includes(filter);
 
       conditions.ingredients =
-        conditions.ingredients &&
-        isInputInIngredients(currentResult[i], filter[j]);
-    }
+        conditions.ingredients && isInputInIngredients(recipe, filter);
+    });
 
-    // check if all filters are in the recipe
+    // check if all filterss are in the recipe
     if (
       conditions.name ||
       conditions.description ||
@@ -41,13 +37,13 @@ const generateNewResult = async (currentResult, filter) => {
       conditions.ustensils ||
       conditions.ingredients
     ) {
-      newResult.push(currentResult[i]);
+      newResult.push(recipe);
     } else {
-      // console.log(filter);
+      // console.log(filters);
       // console.log("tag not find in currentResult");
       // console.log(currentResult);
     }
-  }
+  });
 
   return newResult;
 };

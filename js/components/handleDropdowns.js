@@ -14,18 +14,15 @@ const handleDropdowns = () => {
     !!(elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length);
 
   const outsideClickListener = (event) => {
-    for (let i = 0; i < allDropdowns.length; i += 1) {
+    allDropdowns.forEach((dropdown) => {
       // for all dropdowns, if click outside the element AND visible, close it.
-      if (
-        !allDropdowns[i].contains(event.target) &&
-        isVisible(allDropdowns[i])
-      ) {
-        allDropdowns[i].setAttribute("aria-expanded", "false");
+      if (!dropdown.contains(event.target) && isVisible(dropdown)) {
+        dropdown.setAttribute("aria-expanded", "false");
       } else {
         // open the menu
         handleDropdownClick(event.target.textContent.toLowerCase());
       }
-    }
+    });
   };
 
   document.addEventListener("click", outsideClickListener);

@@ -1,4 +1,4 @@
-function generateContent(value) {
+function generateContent(values) {
   const mainContent = document.querySelector(".album .row");
   const ingredients = document.querySelector(".dropdown-menu--ingredients");
   const appliances = document.querySelector(".dropdown-menu--appliances");
@@ -9,36 +9,35 @@ function generateContent(value) {
   utensils.innerHTML = "";
   ingredients.innerHTML = "";
 
-  for (let i = 0; i < value.length; i += 1) {
+  values.forEach((value) => {
     // update main content
-    mainContent.innerHTML += value[i].html;
+    mainContent.innerHTML += value.html;
 
-    const myApplianceValue = value[i].appliance.toLowerCase();
+    const myApplianceValue = value.appliance.toLowerCase();
     if (myApplianceValue && !appliances.innerHTML.includes(myApplianceValue)) {
       // render filter in its dropdown menu
       appliances.innerHTML += `<li class="dropdown-menu__item" data-value="${myApplianceValue}">${myApplianceValue}</li>`;
     }
 
     // update by looping through all ustensils and display them in the ustensils advanced search bar
-    for (let j = 0; j < value[i].ustensils.length; j += 1) {
-      const myUstensilsValue = value[i].ustensils[j].toLowerCase();
+    value.ustensils.forEach((ustensil) => {
+      const myUstensilsValue = ustensil.toLowerCase();
       if (myUstensilsValue && !utensils.innerHTML.includes(myUstensilsValue)) {
         utensils.innerHTML += `<li class="dropdown-menu__item" data-value="${myUstensilsValue}">${myUstensilsValue}</li>`;
       }
-    }
+    });
 
     // update by looping through all ingredients and display them in the ingredients advanced search bar
-    for (let k = 0; k < value[i].ingredients.length; k += 1) {
-      const myIngredientValue =
-        value[i].ingredients[k].ingredient.toLowerCase();
+    value.ingredients.forEach((ingredient) => {
+      const myIngredientValue = ingredient.ingredient.toLowerCase();
       if (
         myIngredientValue &&
         !ingredients.innerHTML.includes(myIngredientValue)
       ) {
         ingredients.innerHTML += `<li class="dropdown-menu__item" data-value="${myIngredientValue}">${myIngredientValue}</li>`;
       }
-    }
-  }
+    });
+  });
   if (mainContent.childElementCount === 0) {
     mainContent.innerHTML = `
     <div class="recipe-not-found">
