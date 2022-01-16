@@ -1,6 +1,6 @@
 # Les Petits Plats
 
-Les Petits Plats is a search engine that allows you to quickly find recipes adapted to the ingredients and utensils you have on hand. Project 7 of the OpenClassrooms "Front End Developer" training.
+Les Petits Plats is a recipe search engine based on the ingredients and utensils you have on hand. Project 7 of the OpenClassrooms "Front End Developer" training.
 
 The application consists of a simple page, made with Javascript (vanilla). On this page a search engine allows you to search in a database of 50 recipes (represented by a JSON file) either via keywords (which will match the name, description or ingredient list of the recipes) or via a selector of ingredients, utensils or appliances.
 
